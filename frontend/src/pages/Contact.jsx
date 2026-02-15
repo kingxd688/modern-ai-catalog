@@ -23,7 +23,7 @@ const Contact = () => {
     // Mock submission - will be replaced with backend API
     console.log('Contact form submission:', formData);
     setStatus('success');
-    
+
     // Reset form
     setFormData({
       name: '',
@@ -53,74 +53,74 @@ const Contact = () => {
           <div className="contact-form-section">
             <h2 className="contact-section-title">Send Us a Message</h2>
             
-            {status === 'success' ? (
-              <div className="contact-success">
+            {status === 'success' ?
+            <div className="contact-success">
                 <CheckCircle size={48} />
                 <h3>Message Sent Successfully!</h3>
                 <p>Thank you for reaching out. We'll get back to you within 24-48 hours.</p>
-                <button 
-                  onClick={() => setStatus('idle')} 
-                  className="btn-secondary"
-                >
+                <button
+                onClick={() => setStatus('idle')}
+                className="btn-secondary">
+
                   Send Another Message
                 </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="contact-form">
+              </div> :
+
+            <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
                   <label htmlFor="name" className="form-label">Name *</label>
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="form-input"
-                    placeholder="Your name"
-                    required
-                  />
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="form-input"
+                  placeholder="Your name"
+                  required />
+
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="email" className="form-label">Email *</label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="form-input"
-                    placeholder="your.email@example.com"
-                    required
-                  />
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="form-input"
+                  placeholder="your.email@example.com"
+                  required />
+
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="subject" className="form-label">Subject *</label>
                   <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="form-input"
-                    placeholder="What's this about?"
-                    required
-                  />
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="form-input"
+                  placeholder="What's this about?"
+                  required />
+
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="message" className="form-label">Message *</label>
                   <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="form-textarea"
-                    placeholder="Tell us more..."
-                    rows="6"
-                    required
-                  />
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="form-textarea"
+                  placeholder="Tell us more..."
+                  rows="6"
+                  required />
+
                 </div>
 
                 <button type="submit" className="btn-primary btn-full">
@@ -128,7 +128,7 @@ const Contact = () => {
                   Send Message
                 </button>
               </form>
-            )}
+            }
           </div>
 
           {/* Contact Info */}
@@ -141,7 +141,8 @@ const Contact = () => {
                   <Mail size={24} />
                 </div>
                 <h3 className="contact-info-title">Email</h3>
-                <p className="contact-info-text">hello@skillwithai.com</p>
+                <p className="contact-info-text">skillwithais@gmail.com
+                </p>
                 <p className="contact-info-subtext">We reply within 24-48 hours</p>
               </div>
 
@@ -175,8 +176,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
 };
 
 export default Contact;
